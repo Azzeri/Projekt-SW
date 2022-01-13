@@ -11,8 +11,8 @@ ledGreen = LED(27)
 ledGreen.off()
 ledRed.off()
 
-button.when_pressed = ledGreen.on
-button.when_released = ledGreen.off
+buttonIncrease.when_pressed = ledGreen.on
+buttonIncrease.when_released = ledGreen.off
 
 vehicle = Vehicle()
 mainController = WaveController(50)
