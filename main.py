@@ -38,4 +38,10 @@ while True:
             print('Przejecjałeś światła nr ' + str(mainController.closestLights.number) + ' na kolorze ' + mainController.closestLights.color)
             if mainController.checkIfVehicleExceededSpeed(vehicle) == True:
                 trafficLights[mainController.nextLightsIndex].color = 'red'
+                ledRed.on()
+                ledGreen.off()
+            else:
+                ledRed.off()
+                ledGreen.on()
             print('Numer następnych świateł: ' + str( trafficLights[mainController.nextLightsIndex].number) + ' Kolor: ' + trafficLights[mainController.nextLightsIndex].color)
+
