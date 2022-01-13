@@ -1,15 +1,18 @@
 from Vehicle import Vehicle
 from TrafficLights import TrafficLights
 from WaveController import WaveController
-from gpiozero import LED
+from gpiozero import LED, Button
 
-# buttonIncrease = LED(17)
-# buttonDecrease = LED(4)
+buttonIncrease = Button(17)
+buttonDecrease = Button(4)
 ledRed = LED(22)
 ledGreen = LED(27)
 
-ledGreen.on()
-ledRed.on()
+ledGreen.off()
+ledRed.off()
+
+button.when_pressed = led.on
+button.when_released = led.off
 
 vehicle = Vehicle()
 mainController = WaveController(50)
