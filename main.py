@@ -8,7 +8,7 @@ buttonDecrease = Button(4)
 ledRed = LED(22)
 ledGreen = LED(27)
 
-ledGreen.off()
+ledGreen.on()
 ledRed.off()
 
 # buttonIncrease.when_pressed = ledGreen.on
@@ -35,7 +35,7 @@ while True:
     else:
         mainController.compareVehicleAndLightsPosition(vehicle, trafficLights)
         if(mainController.closestLights):
-            print('Dojechałeś do świateł nr' + str(mainController.closestLights.number))
+            print('Przejecjałeś światła nr ' + str(mainController.closestLights.number) + ' na kolorze ' + mainController.closestLights.color)
             if mainController.checkIfVehicleExceededSpeed(vehicle) == True:
                 trafficLights[mainController.nextLightsIndex].color = 'red'
             print('Numer następnych świateł: ' + str( trafficLights[mainController.nextLightsIndex].number) + ' Kolor: ' + trafficLights[mainController.nextLightsIndex].color)
