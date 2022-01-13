@@ -12,7 +12,7 @@ class Vehicle:
             self.speed += 10
         else:
             self.speed = self.maxSpeed
-        print('Aktualna prędkość: ' + str(self.speed))
+        print('Aktualna prędkość: ' + str(round(self.speed)) + 'km/h')
 
     def decreaseSpeed(self):
         if self.speed - 10 >= self.minSpeed:
