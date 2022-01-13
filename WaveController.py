@@ -17,6 +17,8 @@ class WaveController:
                 self.closestLights = lights[index]
                 if index != len(lights) - 1:
                     self.nextLightsIndex = index + 1
+            elif vehicle.position >= lights[index].position - 70 && lights[index].color == 'red':
+                lights[index].switchLightsColor()
 
     def reset(self):
         self.closestLights = None
