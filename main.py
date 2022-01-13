@@ -2,7 +2,7 @@ from Vehicle import Vehicle
 from TrafficLights import TrafficLights
 from WaveController import WaveController
 # koment
-
+# komentarz
 vehicle = Vehicle()
 mainController = WaveController(50)
 trafficLights = [
