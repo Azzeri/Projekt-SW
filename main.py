@@ -24,7 +24,8 @@ trafficLights = [
 ]
 
 # vehicle.increaseSpeed(650)
-buttonIncrease.when_pressed = vehicle.increaseSpeed(10)
+buttonIncrease.when_pressed = vehicle.increaseSpeed
+buttonDecrease.when_pressed = vehicle.decreaseSpeed
 while True:
     vehicle.updatePosition()
     if vehicle.position >= trafficLights[len(trafficLights) - 1].position:

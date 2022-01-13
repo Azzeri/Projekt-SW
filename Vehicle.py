@@ -7,24 +7,26 @@ class Vehicle:
     minSpeed = 0
     maxSpeed = 300
 
-    def increaseSpeed(self, value):
-        if self.speed + value < self.maxSpeed:
-            self.speed += value
+    def increaseSpeed(self):
+        if self.speed + 10 < self.maxSpeed:
+            self.speed += 10
         else:
             self.speed = self.maxSpeed
+        print('Aktualna prędkość: ' + str(self.speed))
 
-    def decreaseSpeed(self, value):
-        if self.speed - value >= self.minSpeed:
-            self.speed -= value
+    def decreaseSpeed(self):
+        if self.speed - 10 >= self.minSpeed:
+            self.speed -= 10
         else:
             self.speed = self.minSpeed
+        print('Aktualna prędkość: ' + str(self.speed))
 
     def updatePosition(self):
         currentSpeedInMps = self.speed * 0.277777778
         self.position += currentSpeedInMps
         print(self.position)
         time.sleep(1)
-    
+
     def reset(self):
         self.position = 0
         self.speed = 0
