@@ -11,8 +11,8 @@ ledGreen = LED(27)
 ledGreen.off()
 ledRed.off()
 
-buttonIncrease.when_pressed = ledGreen.on
-buttonIncrease.when_released = ledGreen.off
+# buttonIncrease.when_pressed = ledGreen.on
+# buttonIncrease.when_released = ledGreen.off
 
 vehicle = Vehicle()
 mainController = WaveController(50)
@@ -23,8 +23,8 @@ trafficLights = [
     TrafficLights(1100, 'green')
 ]
 
-vehicle.increaseSpeed(650)
-
+# vehicle.increaseSpeed(650)
+buttonIncrease.when_pressed = vehicle.increaseSpeed(10)
 while True:
     vehicle.updatePosition()
     if vehicle.position >= trafficLights[len(trafficLights) - 1].position:
