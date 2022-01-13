@@ -17,10 +17,10 @@ ledRed.off()
 vehicle = Vehicle()
 mainController = WaveController(50)
 trafficLights = [
-    TrafficLights(200, 'green'),
-    TrafficLights(500, 'green'),
-    TrafficLights(800, 'green'),
-    TrafficLights(1100, 'green')
+    TrafficLights(1, 200, 'green'),
+    TrafficLights(2, 500, 'green'),
+    TrafficLights(3, 800, 'green'),
+    TrafficLights(4, 1100, 'green')
 ]
 
 # vehicle.increaseSpeed(650)
@@ -35,7 +35,7 @@ while True:
     else:
         mainController.compareVehicleAndLightsPosition(vehicle, trafficLights)
         if(mainController.closestLights):
-            print('mamy swiatla ' + str(mainController.closestLights.position))
+            print('Dojechałeś do świateł nr' + str(mainController.closestLights.number))
             if mainController.checkIfVehicleExceededSpeed(vehicle) == True:
                 trafficLights[mainController.nextLightsIndex].color = 'red'
-            print('nastepne swiatla ' + str( trafficLights[mainController.nextLightsIndex].position) + ' kolor: ' + trafficLights[mainController.nextLightsIndex].color)
+            print('Numer następnych świateł: ' + str( trafficLights[mainController.nextLightsIndex].number) + ' Kolor: ' + trafficLights[mainController.nextLightsIndex].color)

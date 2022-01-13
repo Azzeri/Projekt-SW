@@ -24,7 +24,7 @@ class Vehicle:
     def updatePosition(self):
         currentSpeedInMps = self.speed * 0.277777778
         self.position += currentSpeedInMps
-        print('\nAktualna pozycja: ' + str(round(self.position)) + 'm')
+        print('Aktualna pozycja: ' + str(round(self.position)) + 'm\n')
         time.sleep(1)
 
     def reset(self):
