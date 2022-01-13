@@ -19,12 +19,12 @@ class Vehicle:
             self.speed -= 10
         else:
             self.speed = self.minSpeed
-        print('Aktualna prędkość: ' + str(self.speed))
+        print('Aktualna prędkość: ' + str(round(self.speed)))
 
     def updatePosition(self):
         currentSpeedInMps = self.speed * 0.277777778
         self.position += currentSpeedInMps
-        print(self.position)
+        print('\nAktualna pozycja: ' + str(self.position))
         time.sleep(1)
 
     def reset(self):
