@@ -1,8 +1,16 @@
 from Vehicle import Vehicle
 from TrafficLights import TrafficLights
 from WaveController import WaveController
-# koment
-# komentarz
+from gpiozero import LED
+
+# buttonIncrease = LED(17)
+# buttonDecrease = LED(4)
+ledRed = LED(22)
+ledGreen = LED(27)
+
+ledGreen.on()
+ledRed.on()
+
 vehicle = Vehicle()
 mainController = WaveController(50)
 trafficLights = [
