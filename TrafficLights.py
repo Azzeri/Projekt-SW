@@ -4,3 +4,6 @@ class TrafficLights:
         self.number = number
         self.position = position
         self.color = color
+
+    def reset(self):
+        self.color = 'green'

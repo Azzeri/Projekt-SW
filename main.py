@@ -31,6 +31,8 @@ while True:
     if vehicle.position >= trafficLights[len(trafficLights) - 1].position:
         vehicle.reset()
         mainController.reset()
+        for light in trafficLights:
+            light.reset()
         break
     else:
         mainController.compareVehicleAndLightsPosition(vehicle, trafficLights)
