@@ -24,6 +24,6 @@ while True:
         mainController.compareVehicleAndLightsPosition(vehicle, trafficLights)
         if(mainController.closestLights):
             print('mamy swiatla ' + str(mainController.closestLights.position))
-            print('nastepne swiatla ' + str( trafficLights[mainController.nextLightsIndex].position) + ' kolor: ' + trafficLights[mainController.nextLightsIndex].color)
             if mainController.checkIfVehicleExceededSpeed(vehicle) == True:
                 trafficLights[mainController.nextLightsIndex].color = 'red'
+            print('nastepne swiatla ' + str( trafficLights[mainController.nextLightsIndex].position) + ' kolor: ' + trafficLights[mainController.nextLightsIndex].color)
